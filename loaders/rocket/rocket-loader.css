@@ -1,6 +1,5 @@
 :root {
     --light-grey: #e8e8e8;
-    --bright-red: #ff3d00;
 }
 
 @keyframes rocket-fire {
@@ -25,26 +24,13 @@
     }
 }
 
-section {
-    min-width: 200px;
-    width: 33.33%;
-    height: 200px;
-    padding: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #cccccc;
-    cursor: pointer;
-}
-
 .rocket {
     width: 2rem;
     height: 5.625rem;
     margin-bottom: 1.25rem;
     position: relative;
     border-radius: 50% 50% 0 0;
-    border-bottom: 10px solid var(--bright-red);
+    border-bottom: 10px solid var(--danger);
     animation: rocket-fire 1s linear infinite alternate;
     background-size: 1.75rem 1.75rem;
     background-position: center 20px, center 2px;
@@ -53,11 +39,11 @@ section {
     background-image: radial-gradient(
         ellipse at center,
         var(--light-grey) 34%,
-        var(--bright-red) 35%,
-        var(--bright-red) 54%,
+        var(--danger) 35%,
+        var(--danger) 54%,
         var(--light-grey) 55%
     ), linear-gradient(
-        var(--bright-red) 10px, transparent 0
+        var(--danger) 10px, transparent 0
     );
 }
 
@@ -70,7 +56,7 @@ section {
     width: 4rem;
     height: 2.75rem;
     border-radius: 50%;
-    box-shadow: 0 15px var(--bright-red) inset;
+    box-shadow: 0 15px var(--danger) inset;
 }
 
 .rocket::after {

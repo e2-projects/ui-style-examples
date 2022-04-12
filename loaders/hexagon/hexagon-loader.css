@@ -1,0 +1,169 @@
+@keyframes fade{
+    0% { background: var(--primary); }
+    50%{ background: var(--blue); }
+    100%{ background: var(--primary); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.01); }
+    100% { transform: scale(1); }
+}
+
+.hexagon-loader {
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.hexagon-loader > .cell {
+    height: 30px;
+    width: 30px;
+    transition: all .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hexagon-loader > .cell > .cell-content {
+    width: 1.875rem;
+    height: 1.063rem;
+    position: absolute;
+    top: 5px;
+    background-color: var(--primary);
+    animation: fade 2s infinite;
+}
+
+.hexagon-loader > .cell > .cell-content.h2 {
+    content: '';
+    transform: rotate(60deg);
+}
+
+.hexagon-loader > .cell > .cell-content.h3 {
+    content: '';
+    transform: rotate(-60deg);
+}
+
+.center-cell {
+    margin-left: -15px;
+    margin-top: -15px;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.cell.position-1 {
+    margin-left: -47px;
+    margin-top: -15px;
+}
+
+.cell.position-2 {
+    margin-left: -31px;
+    margin-top: -43px;
+}
+
+.cell.position-3 {
+    margin-left: 1px;
+    margin-top: -43px;
+}
+
+.cell.position-4 {
+    margin-left: 17px;
+    margin-top: -15px;
+}
+.cell.position-5 {
+    margin-left: -31px;
+    margin-top: 13px;
+}
+
+.cell.position-6 {
+    margin-left: 1px;
+    margin-top: 13px;
+}
+
+.cell.position-7 {
+    margin-left: -63px;
+    margin-top: -43px;
+}
+
+.cell.position-8 {
+    margin-left: 33px;
+    margin-top: -43px;
+}
+
+.cell.position-9 {
+    margin-left: -15px;
+    margin-top: 41px;
+}
+
+.cell.position-10 {
+    margin-left: -63px;
+    margin-top: 13px;
+}
+
+.cell.position-11 {
+    margin-left: 33px;
+    margin-top: 13px;
+}
+
+.cell.position-12 {
+    margin-left: -15px;
+    margin-top: -71px;
+}
+
+.cell.position-13 {
+    margin-left: -47px;
+    margin-top: -71px;
+}
+
+.cell.position-14 {
+    margin-left: 17px;
+    margin-top: -71px;
+}
+
+.cell.position-15 {
+    margin-left: -47px;
+    margin-top: 41px;
+}
+
+.cell.position-16 {
+    margin-left: 17px;
+    margin-top: 41px;
+}
+
+.cell.position-17 {
+    margin-left: -79px;
+    margin-top: -15px;
+}
+
+.cell.position-18 {
+    margin-left: 49px;
+    margin-top: -15px;
+}
+
+.cell.hexagon-circle-1 {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+}
+
+.cell.hexagon-circle-2 {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+}
+
+.cell.hexagon-circle-1 > .cell-content {
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+}
+
+.cell.hexagon-circle-2 > .cell-content {
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .6s;
+}
