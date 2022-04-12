@@ -1,0 +1,58 @@
+:root {
+    --light-yellow: #d6ff0e;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.bicycle {
+    width: 6.625rem;
+    height: 3.5rem;
+    position: relative;
+    transform: rotate(-45deg);
+    background-repeat: no-repeat;
+    background-size: 3rem .938rem,
+                    .938rem 2.188rem,
+                    .938rem 2.188rem,
+                    1.563rem .938rem,
+                    1.75rem 1.75rem;
+    background-position: 25px 5px,
+                         58px 20px,
+                         25px 17px,
+                         2px 37px,
+                         76px 0;
+    background-image: linear-gradient(var(--light-yellow) 3.125rem, transparent 0),
+                      linear-gradient(var(--light-yellow) 3.125rem, transparent 0),
+                      linear-gradient(var(--light-yellow) 3.125rem, transparent 0),
+                      linear-gradient(var(--light-yellow) 3.125rem, transparent 0),
+                      radial-gradient(circle .875rem, var(--light-yellow) 100%, transparent 0);
+}
+
+.bicycle::before,
+.bicycle::after {
+    content: '';
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    border: 6px solid var(--light-yellow);
+    border-radius: 50%;
+    left: -45px;
+    top: -10px;
+    animation: rotation .5s linear infinite;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2.5rem .063rem,
+                     .063rem 2.5rem,
+                     .5rem .5rem;
+    background-image: linear-gradient(var(--light-yellow) 4rem, transparent 0),
+                      linear-gradient(var(--light-yellow) 4.125rem, transparent 0),
+                      radial-gradient(circle .25rem, var(--light-yellow) 100%, transparent 0);
+}
+
+.bicycle::before {
+    left: 1.563rem;
+    top: 3.75rem;
+}
+
