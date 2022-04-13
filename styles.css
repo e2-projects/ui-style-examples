@@ -1,5 +1,10 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css);
 
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
 .loader {
     min-width: 200px;
     width: 33.33%;
