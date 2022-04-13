@@ -1,0 +1,51 @@
+.neu-radio-group {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf2fa;
+}
+
+input.neu {
+    padding: .625rem 1.875rem;
+    margin: 1.25rem;
+    box-sizing: border-box;
+    background: #e5edf5;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: -4px -2px 16px rgba(255, 255, 255, .8),
+                4px 2px 16px rgba(95, 157, 231, .48),
+                inset -4px -2px 8px #ffffff,
+                inset 4px 2px 8px rgba(95, 157, 231, .48);
+}
+
+input[type="radio"].neu {
+    width: 3.125rem;
+    height: 3.125rem;
+    appearance: none;
+    padding: 0;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+input[type="radio"].neu:not(:checked):hover {
+    background: #e5edf5;
+    box-shadow: -11px -11px 22px rgba(255, 255, 255, .8),
+                11px 13px 22px rgba(95, 157, 231, .48),
+                inset -11px -11px 28px #ffffff,
+                inset 11px 11px 28px rgba(95, 157, 231, .48);
+
+}
+
+input[type="radio"].neu:checked {
+    background: linear-gradient(135deg, #7844e9 0%, #0979ff 100%);
+    box-sizing: border-box;
+    border: .625rem solid #e5edf5;
+    box-shadow: -4px -2px 8px #ffffff,
+                4px 2px 8px rgba(95, 157, 231, .657315);
+
+}
+
+input[type="radio"].neu:checked:hover {
+    background: linear-gradient(135deg, #7844e9 0%, #0979ff 100%);
+}
