@@ -1,0 +1,263 @@
+@keyframes explode {
+    0% {
+        opacity: 0;
+        transform: scale(10);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes drop-1 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        height: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-2px);
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes drop-2 {
+    0% {
+        opacity: 0;
+        transform: rotate(-55deg) translate(-20px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-55deg) translate(9px);
+        width: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes drop-3 {
+    0% {
+        opacity: 0;
+        transform: translate(-28px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(9px);
+        width: 0;
+    }
+}
+
+@keyframes drop-4 {
+    0% {
+        opacity: 0;
+        transform: rotate(55deg) translate(-20px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(55deg) translate(9px);
+        width: 0;
+    }
+}
+
+@keyframes drop-5 {
+    0% {
+        opacity: 0;
+        transform: rotate(55deg) translate(20px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(55deg) translate(-9px);
+        width: 0;
+    }
+}
+
+@keyframes drop-6 {
+    0% {
+        opacity: 0;
+        transform: translate(20px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        transform: translate(-9px);
+    }
+}
+
+@keyframes drop-7 {
+    0% {
+        opacity: 0;
+        transform: rotate(-55deg) translate(28px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        transform: rotate(-55deg) translate(-9);
+    }
+}
+
+@keyframes drop-8 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+        width: 10px;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0;
+        transform: translateY(2px);
+    }
+}
+
+label::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    position: absolute;
+    left: 7px;
+    top: calc(50% - 13rem);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.touch {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: -3px;
+    top: 2px;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+input[type="radio"]:checked ~ .touch {
+    position: absolute;
+    opacity: 1;
+    animation: explode .35s;
+}
+
+.line {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0;
+}
+
+.line.zero {
+    width: 2px;
+    height: 10px;
+    left: 11px;
+    top: -21px;
+    transform: translateY(20px);
+}
+
+input[type="radio"]:checked ~ .touch .line.zero {
+    animation: drop-1 .9s forwards .1s;
+}
+
+.line.one {
+    right: -7px;
+    top: -11px;
+    transform: rotate(-55deg) translate(-9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.one {
+    animation: drop-2 .9s forwards .1s;
+}
+
+.line.two {
+    right: -20px;
+    top: 11px;
+    transform: translate(-9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.twpo {
+    animation: drop-3 .9s forwards .1s;
+}
+
+.line.three {
+    right: -8px;
+    top: 35px;
+    transform: rotate(55deg) translate(-9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.three {
+    animation: drop-4 .9s forwards .1s;
+}
+
+.line.four {
+    left: -8px;
+    top: -11px;
+    transform: rotate(55deg) translate(9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.four {
+    animation: drop-5 .9s forwards .1s;
+}
+
+.line.five {
+    left: -20px;
+    top: 11px;
+    transform: translate(9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.five {
+    animation: drop-6 .9s forwards .1s;
+}
+
+.line.six {
+    left: -8px;
+    top: 35px;
+    transform: rotate(-55deg) translate(9px);
+}
+
+input[type="radio"]:checked ~ .touch .line.six {
+    animation: drop-7 .9s forwards .1s;
+}
+
+.line.seven {
+    width: 2px;
+    height: 10px;
+    left: 11px;
+    bottom: -21px;
+    transform: translateY(-20px);
+}
+
+input[type="radio"]:checked ~ .touch .line.seven {
+    animation: drop-8 .9s forwards .1s;
+}
